@@ -6,7 +6,7 @@
   const has = () => typeof gsap !== 'undefined' && !reduce;
 
   function mirror() {
-    const hero = document.getElementById('hero'), mir = document.getElementById('mirror'), box = document.getElementById('bulbs');
+    const hero = document.getElementById('looks'), mir = document.getElementById('mirror'), box = document.getElementById('bulbs');
     const looks = [...mir.querySelectorAll('.lk')], num = document.getElementById('lkN'), glass = mir.querySelector('.glass');
     let bulbs = [], pts = [], cur = 0, hover = false, vis = true, timer;
 
@@ -27,12 +27,14 @@
     // encendido al cargar
     if (has()) {
       mir.style.setProperty('--lit', 0); bulbs.forEach((b) => b.style.setProperty('--on', 0));
-      const tl = gsap.timeline({ delay: .25 });
+      const tl = gsap.timeline({ scrollTrigger: { trigger: mir, start: 'top 75%' } });
       bulbs.forEach((b, i) => tl.to(b, { keyframes: [{ '--on': 1, duration: .05 }, { '--on': .25, duration: .06 }, { '--on': 1, duration: .1 }] }, i * .03));
       tl.to(mir, { '--lit': 1, duration: 1.1, ease: 'power2.out' }, .35);
       gsap.fromTo('.name span', { yPercent: 40, opacity: 0 }, { yPercent: 0, opacity: 1, duration: 1.4, ease: 'expo.out', stagger: .035, delay: .1 });
+      gsap.fromTo('#campImg img', { scale: 1.18 }, { scale: 1, duration: 2.8, ease: 'expo.out' });
+      gsap.to('#campImg img', { yPercent: 10, ease: 'none', scrollTrigger: { trigger: '#hero', start: 'top top', end: 'bottom top', scrub: true } });
       gsap.fromTo(mir, { y: 60, rotate: 1.5 }, { y: 0, rotate: 0, duration: 1.6, ease: 'expo.out' });
-      gsap.to('.name', { yPercent: -30, ease: 'none', scrollTrigger: { trigger: hero, start: 'top top', end: 'bottom top', scrub: true } });
+      gsap.to('.name', { yPercent: -30, ease: 'none', scrollTrigger: { trigger: '#hero', start: 'top top', end: 'bottom top', scrub: true } });
     }
 
     // las bombillas cercanas al cursor brillan más; el reflejo del cristal se desliza

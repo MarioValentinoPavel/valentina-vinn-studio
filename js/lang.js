@@ -9,7 +9,7 @@ window.I18N_CA = {
   th: 'Casaments, sessions de fotos i desfilades', more: 'Més treballs a Instagram →', gA: 'Look de maquillatge de la Valentina Vinn',
   rh: 'Ressenyes', rp: 'Mitjana de 5,0 a Google, amb 81 ressenyes.', rl: 'Llegir les ressenyes a Google →',
   ch: 'Demana la teva hora', cp: 'Escriu-me per Instagram per demanar hora o per consultar la data del teu casament.',
-  d1: 'Estudi', d2: 'Cites', d2v: 'Per missatge a Instagram', lg1: 'Avís legal', lg2: 'Privacitat', lg3: 'Galetes', lg4: 'Configurar galetes'
+  d1: 'Estudi', d2: 'Cites', d2v: 'Per missatge a Instagram', lg1: 'Avís legal', lg2: 'Privacitat', lg3: 'Galetes', lg4: 'Configurar galetes', lkh: 'Looks', lkp: 'Alguns dels meus maquillatges. Prem «Un altre look» per veure el següent.'
 };
 window.I18N_EN = {
   skip: 'Skip to content', n1: 'Services', n2: 'Work', n3: 'Reviews', n4: 'Contact', cta: 'Book',
@@ -22,5 +22,5 @@ window.I18N_EN = {
   th: 'Weddings, photo shoots and fashion shows', more: 'More work on Instagram →', gA: 'Make-up look by Valentina Vinn',
   rh: 'Reviews', rp: 'A 5.0 average on Google, from 81 reviews.', rl: 'Read the reviews on Google →',
   ch: 'Book your appointment', cp: 'Message me on Instagram to book or to check availability for your wedding date.',
-  d1: 'Studio', d2: 'Appointments', d2v: 'By Instagram message', lg1: 'Legal notice', lg2: 'Privacy', lg3: 'Cookies', lg4: 'Cookie settings'
+  d1: 'Studio', d2: 'Appointments', d2v: 'By Instagram message', lg1: 'Legal notice', lg2: 'Privacy', lg3: 'Cookies', lg4: 'Cookie settings', lkh: 'Looks', lkp: 'Some of my make-up looks. Press «Next look» to see the next one.'
 };
